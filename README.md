@@ -30,8 +30,7 @@ assets:
 ```
 
 ### Pembahasan Code
-1. Pembuatan Stateful Widget, untuk berpindah antar tampilan dibutuhkan variabel bertipe boolean __*_isSplash*__, apabila __*_isSplash*__ bernilai **True** maka akan ditampilkan splash screen, begitupun sebaliknya. Untuk dapat mengubah valuenya maka dibutuhkan method yaitu __*_setSplashScreen(bool newValue)*__
-
+1. Pembuatan Stateful Widget, untuk berpindah antar tampilan dibutuhkan variabel bertipe boolean __*_isSplash*__, apabila __*_isSplash*__ bernilai **True** maka akan ditampilkan splash screen, begitupun sebaliknya. Untuk dapat mengubah valuenya maka dibutuhkan method yaitu __*_setSplashScreen(bool newValue)*__ .
 ```
 class Merdeka extends StatefulWidget {
     Merdeka({Key key}) : super(key: key);
@@ -55,16 +54,16 @@ class _MerdekaState extends State<Merdeka> {
 2. Penggunaan __*_isSplash*__ pada widget untuk memilih tampilah
 ```
 @override
-  Widget build(BuildContext context) {
-    // jika splash screen true maka ditampilkan splash screen
-    if (_isSplash) {
-        ...
-      // return Tampilan Splash Screen
-    } else {
-        ...
-      // Return Tampilan utama
-    }
+Widget build(BuildContext context) {
+  // jika splash screen true maka ditampilkan splash screen
+  if (_isSplash) {
+      ...
+    // return Tampilan Splash Screen
+  } else {
+      ...
+    // Return Tampilan utama
   }
+}
 ```
 
 3. Splash Screen, Pada splash screen tidak menggunakan widget button tapi menggunakan widget **GestureDetector**, yang memiliki child Container berisi Image logo yang berada di folder assets
@@ -89,24 +88,24 @@ return GestureDetector(
 //tampilan utama
 
 return MaterialApp(
-    theme: ThemeData(
-        primaryColor: Colors.red[900], canvasColor: Colors.lightBlue[50]),
-    home: Scaffold(
-        // appBar berisi judul aplikasi dan Icon bendera
-        appBar: AppBar(
-        title: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-                Icon(Icons.flag),
-                Text('Hari Kemerdekaan Indonesia'),
-            ],
-        ),
-        ),
-        body:
-        ...
-        //isi body scaffold
-    ),
+  theme: ThemeData(
+      primaryColor: Colors.red[900], canvasColor: Colors.lightBlue[50]),
+  home: Scaffold(
+      // appBar berisi judul aplikasi dan Icon bendera
+      appBar: AppBar(
+      title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+              Icon(Icons.flag),
+              Text('Hari Kemerdekaan Indonesia'),
+          ],
+      ),
+      ),
+      body:
+      ...
+      //isi body scaffold
+  ),
 );
 
 ```
@@ -116,30 +115,30 @@ return MaterialApp(
 //body menggunakan singleChildScrollView agar bisa scroll ke bawah
 body: SingleChildScrollView(
 child: Column(
-    crossAxisAlignment: CrossAxisAlignment.stretch,
-    children: <Widget>[
-        ...
-        //child pertama, Image
-        
-        ...
-        // child ke dua, Menampilkan Title Tengah (posisi dibawah gambar) 
-        // dibungkus dengan container agar dapat diset padding
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: <Widget>[
+      ...
+      //child pertama, Image
+      
+      ...
+      // child ke dua, Menampilkan Title Tengah (posisi dibawah gambar) 
+      // dibungkus dengan container agar dapat diset padding
 
-        ...
-        // child ke 3 menampilkan text lagu hari kemerdekaan 
-        // dibungkus dengan container agar dapat diset paddingnya
-        
-        ...
-        // child ke 4 Menampilkan Kumpulan Icon dibungkus dengan Row agar urutannya 
-        // memanjang dan diletakan di posisi tengah dengan widget Center
-        
-        ...
-        // child ke 5 menampilkan tulisan text TUGAS 2
+      ...
+      // child ke 3 menampilkan text lagu hari kemerdekaan 
+      // dibungkus dengan container agar dapat diset paddingnya
+      
+      ...
+      // child ke 4 Menampilkan Kumpulan Icon dibungkus dengan Row agar urutannya 
+      // memanjang dan diletakan di posisi tengah dengan widget Center
+      
+      ...
+      // child ke 5 menampilkan tulisan text TUGAS 2
 
-        ...
-        // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash 
-        
-    ],
+      ...
+      // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash 
+      
+  ],
 ),
 ),
 ```
@@ -180,48 +179,48 @@ Container(
 9. Menampikan kumpulan Icon secara Horizontal, digunakan widget Expanded agar tampilan antar Icon memiliki lebar yang sama
 ```
 Center(
-    child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: <Widget>[
-        //icon dibungkus Expanded agar mempunyai ukuran yang sama,
-        //dan juga dibungkus dengan column agar iconnya mempunyai text di bawahnya
-        Expanded(
-        child: Column(
-            children: <Widget>[
-                Icon(Icons.android,
-                    color: Colors.green, size: 48.0),
-                Text(
-                    'Android',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-            ],
-        ),
-        ),
-        Expanded(
-        child: Column(
-            children: <Widget>[
-                Icon(Icons.email, color: Colors.orange, size: 48.0),
-                Text(
-                    'ffaradyc',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-            ],
-        ),
-        ),
-        Expanded(
-        child: Column(
-            children: <Widget>[
-                Icon(Icons.phone_android,
-                    color: Colors.blue, size: 48.0),
-                Text(
-                    '08157XXXXX38',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-            ],
-        ),
-        ),
-    ],
-    ),
+  child: Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: <Widget>[
+      //icon dibungkus Expanded agar mempunyai ukuran yang sama,
+      //dan juga dibungkus dengan column agar iconnya mempunyai text di bawahnya
+      Expanded(
+      child: Column(
+          children: <Widget>[
+              Icon(Icons.android,
+                  color: Colors.green, size: 48.0),
+              Text(
+                  'Android',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+          ],
+      ),
+      ),
+      Expanded(
+      child: Column(
+          children: <Widget>[
+              Icon(Icons.email, color: Colors.orange, size: 48.0),
+              Text(
+                  'ffaradyc',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+          ],
+      ),
+      ),
+      Expanded(
+      child: Column(
+          children: <Widget>[
+              Icon(Icons.phone_android,
+                  color: Colors.blue, size: 48.0),
+              Text(
+                  '08157XXXXX38',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+          ],
+      ),
+      ),
+  ],
+  ),
 ),
 ```
 
