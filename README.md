@@ -242,6 +242,7 @@ FlatButton(
 import 'package:flutter/material.dart';
 
 void main() => runApp(Merdeka());
+
 // Stateful Widget untuk membuat tampilan dinamis antara tampilan splash dan tampilan utama
 class Merdeka extends StatefulWidget {
   Merdeka({Key key}) : super(key: key);
