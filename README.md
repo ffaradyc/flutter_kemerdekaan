@@ -69,18 +69,18 @@ class _MerdekaState extends State<Merdeka> {
 
 3. Splash Screen, Pada splash screen tidak menggunakan widget button tapi menggunakan widget **GestureDetector**, yang memiliki child Container berisi Image logo yang berada di folder assets
 ```
-    //tampilan splashscreen
-    return GestureDetector(
-        onTap: () {
-          // set splashscreen off ( false )
-          _setSplashScreen(false);
-        },
-        // widget Splash Screen
-        child: Container(
-          color: Colors.white,
-          child: Image.asset('assets/logo.png'),
-        ),
-    );
+//tampilan splashscreen
+return GestureDetector(
+    onTap: () {
+      // set splashscreen off ( false )
+      _setSplashScreen(false);
+    },
+    // widget Splash Screen
+    child: Container(
+      color: Colors.white,
+      child: Image.asset('assets/logo.png'),
+    ),
+);
 ```
 
 4. Main Screen, pada tampilan utama digunakan widget MaterialApp dan scaffold untuk membuat judul pada bagian atas layar. Pada judul dibuat row agar dapat memasukan Icon dan Text.
@@ -114,39 +114,39 @@ return MaterialApp(
 5. Pada bagian Body digunakan __*SingleChildScrollView*__ agar layar dapat discroll ke bawah
 ```
 //body menggunakan singleChildScrollView agar bisa scroll ke bawah
-    body: SingleChildScrollView(
-    child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-            ...
-            //child pertama, Image
-            
-            ...
-            // child ke dua, Menampilkan Title Tengah (posisi dibawah gambar) 
-            // dibungkus dengan container agar dapat diset padding
+body: SingleChildScrollView(
+child: Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+        ...
+        //child pertama, Image
+        
+        ...
+        // child ke dua, Menampilkan Title Tengah (posisi dibawah gambar) 
+        // dibungkus dengan container agar dapat diset padding
 
-            ...
-            // child ke 3 menampilkan text lagu hari kemerdekaan 
-            // dibungkus dengan container agar dapat diset paddingnya
-            
-            ...
-            // child ke 4 Menampilkan Kumpulan Icon dibungkus dengan Row agar urutannya 
-            // memanjang dan diletakan di posisi tengah dengan widget Center
-            
-            ...
-            // child ke 5 menampilkan tulisan text TUGAS 2
+        ...
+        // child ke 3 menampilkan text lagu hari kemerdekaan 
+        // dibungkus dengan container agar dapat diset paddingnya
+        
+        ...
+        // child ke 4 Menampilkan Kumpulan Icon dibungkus dengan Row agar urutannya 
+        // memanjang dan diletakan di posisi tengah dengan widget Center
+        
+        ...
+        // child ke 5 menampilkan tulisan text TUGAS 2
 
-            ...
-            // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash 
-            
-        ],
-    ),
-    ),
+        ...
+        // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash 
+        
+    ],
+),
+),
 ```
 
 6. Widget Image menampilkan gambar panjat pinang
 ```
-    Image.asset('assets/panjat.jpg'),
+Image.asset('assets/panjat.jpg'),
 ```
 
 7. Widget Menampilkan Text Title Berwarna Merah di tengah layar
