@@ -83,7 +83,6 @@ return GestureDetector(
 4. Main Screen, pada tampilan utama digunakan widget MaterialApp dan scaffold untuk membuat judul pada bagian atas layar. Pada judul dibuat row agar dapat memasukan Icon dan Text.
 ```
 //tampilan utama
-
 return MaterialApp(
   theme: ThemeData(
       primaryColor: Colors.red[900], canvasColor: Colors.lightBlue[50]),
@@ -113,26 +112,20 @@ child: Column(
   crossAxisAlignment: CrossAxisAlignment.stretch,
   children: <Widget>[
       ...
-      //child pertama, Image
-      
+      //child pertama, Image      
       ...
       // child ke dua, Menampilkan Title Tengah (posisi dibawah gambar) 
       // dibungkus dengan container agar dapat diset padding
-
       ...
       // child ke 3 menampilkan text lagu hari kemerdekaan 
-      // dibungkus dengan container agar dapat diset paddingnya
-      
+      // dibungkus dengan container agar dapat diset paddingnya      
       ...
       // child ke 4 Menampilkan Kumpulan Icon dibungkus dengan Row agar urutannya 
-      // memanjang dan diletakan di posisi tengah dengan widget Center
-      
+      // memanjang dan diletakan di posisi tengah dengan widget Center      
       ...
       // child ke 5 menampilkan tulisan text TUGAS 2
-
       ...
-      // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash 
-      
+      // child ke 6 berisi flatbutton yang digunakan untuk berpindah ke halaman splash       
   ],
 ),
 ),
