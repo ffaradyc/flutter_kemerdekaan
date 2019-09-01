@@ -30,7 +30,7 @@ assets:
 ```
 
 ### Pembahasan Code
-1. Pembuatan Stateful Widget, untuk berpindah antar tampilan dibutuhkan variabel bertipe boolean __*_isSplash*__, apabila __*_isSplash*__ bernilai **True** maka akan ditampilkan splash screen, begitupun sebaliknya. Untuk dapat mengubah valuenya maka dibutuhkan method yaitu __*_setSplashScreen(bool newValue)*__ .
+1. Pembuatan Stateful Widget, untuk berpindah antar tampilan dibutuhkan variabel bertipe boolean __*_isSplash*__, apabila __*_isSplash*__ bernilai **True** maka akan ditampilkan splash screen, begitupun sebaliknya. Untuk dapat mengubah valuenya maka dibutuhkan method yaitu __*_setSplashScreen(bool newValue)*__. Method ini mengubah value isSplash.
 ```
 class Merdeka extends StatefulWidget {
     Merdeka({Key key}) : super(key: key);
