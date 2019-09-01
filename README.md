@@ -38,7 +38,6 @@ assets:
       _MerdekaState createState() => _MerdekaState();
   }
 ```
-
 ```
   class _MerdekaState extends State<Merdeka> {
       bool _isSplash = true;
@@ -52,7 +51,6 @@ assets:
       // Widget Aplikasi
   }
 ```
-
 2. Penggunaan __*_isSplash*__ pada widget untuk memilih tampilan
 ```
 @override
@@ -67,7 +65,6 @@ Widget build(BuildContext context) {
   }
 }
 ```
-
 3. Splash Screen, Pada splash screen tidak menggunakan widget button tapi menggunakan widget **GestureDetector**, yang memiliki child Container berisi Image logo yang berada di folder assets
 ```
 //tampilan splashscreen
@@ -83,7 +80,6 @@ return GestureDetector(
     ),
 );
 ```
-
 4. Main Screen, pada tampilan utama digunakan widget MaterialApp dan scaffold untuk membuat judul pada bagian atas layar. Pada judul dibuat row agar dapat memasukan Icon dan Text.
 ```
 //tampilan utama
@@ -108,9 +104,7 @@ return MaterialApp(
       //isi body scaffold
   ),
 );
-
 ```
-
 5. Pada bagian Body digunakan __*SingleChildScrollView*__ agar layar dapat discroll ke bawah
 ```
 //body menggunakan singleChildScrollView agar bisa scroll ke bawah
@@ -143,12 +137,10 @@ child: Column(
 ),
 ),
 ```
-
 6. Widget Image menampilkan gambar panjat pinang
 ```
 Image.asset('assets/panjat.jpg'),
 ```
-
 7. Widget Menampilkan Text Title Berwarna Merah di tengah layar
 ```
 Container(
@@ -165,7 +157,6 @@ Container(
     ),
 ),
 ```
-
 8. Menampilkan teks lagu 17 Agustus
 ```
 Container(
@@ -176,7 +167,6 @@ Container(
     ),
 ),
 ```
-
 9. Menampikan kumpulan Icon secara Horizontal, digunakan widget Expanded agar tampilan antar Icon memiliki lebar yang sama
 ```
 Center(
@@ -224,7 +214,6 @@ Center(
   ),
 ),
 ```
-
 10. Menampikan Widget Text Tugas ke 2 OSG 05
 ```
 Container(
@@ -237,7 +226,6 @@ Container(
     ),
 ),
 ```
-
 11. Menampilkan Widget FlatButton untuk berpindah ke halaman SplasScreen
 ```
 FlatButton(
@@ -255,9 +243,7 @@ FlatButton(
     ),
 ),
 ```
-
 ### Full Code
-
 ```
 import 'package:flutter/material.dart';
 
