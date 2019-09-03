@@ -23,7 +23,7 @@ Tampilan dibagi menjadi 2, yaitu *splash screen* dan *main screen*, digunakan St
 ### Menambahkan Image di flutter
 Untuk menambahkan image agar dapat dibaca oleh flutter, maka pada file __*pubspec.yaml*__ perlu ditambahkan baris assets sebagai berikut, disesuaikan dengan folder asset yang dibuat dan image yang ditempatkan.
 
-```
+```yaml
 assets:
     - assets/logo.png
     - assets/panjat.jpg
